@@ -1,7 +1,14 @@
 # rockScissorsPaper
 
-This is a simple website based GUI for playing rock,paper,scissors against a computer that randomly selects which to do against the computer player.
+## Tech 
+-HTML
+-CSS
+-JavaScript
 
+## Description
+This is a simple website based GUI for playing rock,paper,scissors against a computer.
+
+## Console Game Source Code
 The underlying logic for the game was previously used in a console based game for javascript.
 
 Original:
