@@ -1,32 +1,24 @@
 
-
 // game function
 function game() {
-    //init variables for result tallies
     let computerScore = 0;
     let playerScore = 0;
-    //loop till p or c wins 5 times
-    while ((computerScore<5)||(playerScore<5)) {
-        const buttons = document.querySelectorAll('button');
-        buttons.forEach(button => button.addEventListener('click', e => {
-            console.log(button.textContent.toLowerCase())
-        }));
-        
+    const buttons = document.querySelectorAll('button');
+
+    buttons.forEach(button => button.addEventListener('click', () => {
+        let roundResult = roundPlay(button.textContent.toLowerCase());
         console.log(roundResult);
         if (roundResult === 'Win') {
             playerScore += 1;
         } else if (roundResult === 'Lose') {
             computerScore += 1;
         };
-
-        //display end result on console
         if (playerScore > 4) {
-            return console.log('You have won the game');
+            console.log('You have won the game');
         } else if (computerScore > 4) {
-            return console.log('You have lost the game');
+            console.log('You have lost the game');
         };
-            
-    };
+    }));
 
 };
 
