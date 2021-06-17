@@ -6,17 +6,24 @@ function game() {
     const buttons = document.querySelectorAll('button');
     const computerScoreDisplay = document.querySelector('.computer-score');
     const playerScoreDisplay = document.querySelector('.player-score');
+    const roundDisplay = document.querySelector('.round-display')
 
     buttons.forEach(button => button.addEventListener('click', () => {
         let roundResult = roundPlay(button.textContent.toLowerCase());
         console.log(roundResult);
+
         if (roundResult === 'Win') {
             playerScore += 1;
             playerScoreDisplay.textContent = `Player Score: ${playerScore}`
+            roundDisplay.textContent = 'Round Win!'
+
         } else if (roundResult === 'Lose') {
             computerScore += 1;
             computerScoreDisplay.textContent = `Computer Score: ${computerScore}`
-        };
+            roundDisplay.textContent = 'Round Lose!'
+
+        }else if (roundResult === 'Draw') roundDisplay.textContent = 'Round Draw!';
+
         if (playerScore > 4) {
             console.log('You have won the game');
             playerScoreDisplay.textContent = `Player ${playerScore}:${computerScore} Computer`
