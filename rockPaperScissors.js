@@ -7,7 +7,6 @@ function game() {
     let playerScore = 0;
     //loop till p or c wins 5 times
     while ((computerScore<5)||(playerScore<5)) {
-
         let roundResult = roundPlay(userClick);
         //display each round result with console
         console.log(roundResult);
@@ -30,8 +29,13 @@ function game() {
 
 //user click function
 function userClick() {
-    
+    const rock = document.querySelector('.rock');
+    const paper = document.querySelector('.paper');
+    const scissors = document.querySelector('.paper');
 
+    rock.addEventListener('click', ()=> 'rock');
+    paper.addEventListener('click', ()=> 'paper');
+    scissors.addEventListener('click', ()=> 'scissors')
 };
     
 
