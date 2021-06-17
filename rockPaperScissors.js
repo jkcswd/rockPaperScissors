@@ -5,6 +5,7 @@ function game() {
     let playerScore = 0;
     //loop till p or c wins 5 times
     while ((computerScore<5)||(playerScore<5)) {
+        
         let roundResult = roundPlay();
         //display each round result with console
         console.log(roundResult);
@@ -42,27 +43,23 @@ function computerPlay() {
 };
     
 
-// roundPlay function (working as intended)
-function roundPlay() {
-    //take user input and turn to lower case rock paper or scissors
-    let userInput = prompt('Please enter "rock", "paper" or "scissors":');
-
-    
+// roundPlay function 
+function roundPlay(playerSelection) {
     //take computerPlay return value
     let computerChoice = computerPlay();
     //compare the values and return winner of round
-    if (computerChoice === userInput) {
+    if (computerChoice === playerSelection) {
         return 'Draw';
     } else if (computerChoice === 'rock'){
-        if (userInput === 'paper'){
+        if (playerSelection === 'paper'){
             return 'Win';
         } else {return 'Lose';}
     } else if (computerChoice === 'scissors') {
-        if (userInput === 'rock'){
+        if (playerSelection === 'rock'){
             return 'Win';
         }else {return 'Lose';}
     } else {
-        if (userInput === 'scissors'){
+        if (playerSelection === 'scissors'){
             return 'Win';
         }else {return 'Lose';}
     }
