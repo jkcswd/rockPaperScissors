@@ -108,3 +108,8 @@ Original:
 
 
 ## What I Learned
+
+- how to select nodes on the DOM
+- How to dynamically update the DOM.
+- How to trigger code from event listeners.
+- how to work with nodelists. 
