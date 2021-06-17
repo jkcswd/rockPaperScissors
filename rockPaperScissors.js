@@ -4,22 +4,29 @@ function game() {
     let computerScore = 0;
     let playerScore = 0;
     const buttons = document.querySelectorAll('button');
+    const computerScoreDisplay = document.querySelector('.computer-score');
+    const playerScoreDisplay = document.querySelector('.player-score');
 
     buttons.forEach(button => button.addEventListener('click', () => {
         let roundResult = roundPlay(button.textContent.toLowerCase());
         console.log(roundResult);
         if (roundResult === 'Win') {
             playerScore += 1;
+            playerScoreDisplay.textContent = `Player Score: ${playerScore}`
         } else if (roundResult === 'Lose') {
             computerScore += 1;
+            computerScoreDisplay.textContent = `Computer Score: ${computerScore}`
         };
         if (playerScore > 4) {
             console.log('You have won the game');
+            playerScoreDisplay.textContent = `Player ${playerScore}:${computerScore} Computer`
+            computerScoreDisplay.textContent = 'Player Wins! Refresh page to play again!'
         } else if (computerScore > 4) {
             console.log('You have lost the game');
+            playerScoreDisplay.textContent = `Player ${playerScore}:${computerScore} Computer`
+            computerScoreDisplay.textContent = 'Computer Wins! Refresh page to play again!'
         };
     }));
-
 };
 
 
