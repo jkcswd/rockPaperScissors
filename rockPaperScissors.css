@@ -27,3 +27,15 @@ html {
     text-align: center;
 }
 
+.round-display {
+
+    height: 50px;
+    width: 300px;
+    background-color: antiquewhite; 
+    opacity: 0.5;
+    border: black 5px solid;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
