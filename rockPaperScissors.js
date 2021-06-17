@@ -16,9 +16,9 @@ function game() {
 
         //display end result on console
         if (playerScore > 4) {
-            console.log('You have won the game');
+            return console.log('You have won the game');
         } else if (computerScore > 4) {
-            console.log('You have lost the game');
+            return console.log('You have lost the game');
         };
     };
 
