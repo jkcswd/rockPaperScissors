@@ -1,9 +1,9 @@
 # rockScissorsPaper
 
 ## Tech 
--HTML
--CSS
--JavaScript
+- HTML
+- CSS
+- JavaScript
 
 ## Description
 This is a simple website based GUI for playing rock,paper,scissors against a computer.
