@@ -12,14 +12,14 @@ function game() {
             playerScore += 1;
         } else if (roundResult === 'Lose') {
             computerScore += 1;
-        }else continue;
+        };
 
         //display end result on console
         if (playerScore > 4) {
             console.log('You have won the game');
         } else if (computerScore > 4) {
             console.log('You have lost the game');
-        }else continue;
+        };
     };
 
 };
