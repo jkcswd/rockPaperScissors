@@ -46,19 +46,8 @@ function computerPlay() {
 function roundPlay() {
     //take user input and turn to lower case rock paper or scissors
     let userInput = prompt('Please enter "rock", "paper" or "scissors":');
-    userInput = userInput.toLowerCase();
-    //check if input is rock,scissors,paper
-    let boolCheck = true;
-    if ((userInput === 'rock') || (userInput === 'paper') || (userInput === 'scissors')) {
-        boolCheck = false;
-    }
-    while(boolCheck) {
-        userInput = prompt('That is not "rock","paper" or "scissors". Please enter again:');
-        userInput = userInput.toLowerCase();
-        if ((userInput === 'rock') || (userInput === 'paper') || (userInput === 'scissors')) {
-            boolCheck = false;
-        }
-    }
+
+    
     //take computerPlay return value
     let computerChoice = computerPlay();
     //compare the values and return winner of round
