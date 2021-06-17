@@ -4,4 +4,25 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.display {
+    height: 100px;
+    width: 300px;
+    background-color: antiquewhite; 
+    opacity: 0.5;
+    border: black 5px solid;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
