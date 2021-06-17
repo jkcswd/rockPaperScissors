@@ -1,6 +1,5 @@
 game();
-
-
+ 
 // game function
 function game() {
     //init variables for result tallies
@@ -8,12 +7,8 @@ function game() {
     let playerScore = 0;
     //loop till p or c wins 5 times
     while ((computerScore<5)||(playerScore<5)) {
-        const button = document.querySelector('button');
-        button.addEventListener('click', e=> {
-            console.log(e);
-        });
 
-        let roundResult = roundPlay();
+        let roundResult = roundPlay(userClick);
         //display each round result with console
         console.log(roundResult);
         if (roundResult === 'Win') {
@@ -28,7 +23,14 @@ function game() {
         } else if (computerScore > 4) {
             return console.log('You have lost the game');
         };
+            
     };
+
+};
+
+//user click function
+function userClick() {
+    
 
 };
     
