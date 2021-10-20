@@ -74,4 +74,5 @@ function roundPlay(playerSelection) {
         }else {return 'Lose';}
     }
 };
-    
+
+game();
